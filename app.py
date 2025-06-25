@@ -83,7 +83,7 @@ test_chorales = load_chorales(test_files)
 # Cargar modelo
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("my_bach_model.keras")
+    return tf.keras.models.load_model("my_bach_model.keras", compile=False)
 
 model = load_model()
 min_note = 36
